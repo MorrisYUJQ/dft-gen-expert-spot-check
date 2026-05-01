@@ -1,0 +1,25 @@
+Subject: Request for a short expert spot-check on dyslexia-friendly English text rewriting
+
+Dear [Name],
+
+I hope you are well. I am currently preparing a research submission on dyslexia-friendly text generation, and I would be very grateful if you could help with a short expert spot-check of English rewritten texts.
+
+The rating form is available here:
+https://morrisyujq.github.io/dft-gen-expert-spot-check/
+
+The form contains 20 English samples. For each sample, you will see the original text and two anonymized rewritten versions, labelled Version A and Version B. The system identities are hidden. Could you please rate each version on:
+
+1. Whether it preserves the original meaning and task requirements (1-5),
+2. Whether the presentation is likely to reduce reading burden for dyslexic readers (1-5),
+3. Whether you would Accept, Revise, or Reject it before use.
+
+Short comments are completely fine. It would be especially helpful if you could flag cases where a rewrite loses important terminology, changes the instruction, adds unintended hints, sounds unnatural, or is visually difficult to follow.
+
+The form saves responses locally in your browser only. After finishing, please click "Export CSV" and send the downloaded CSV file back to me.
+
+This is not a clinical or diagnostic evaluation, and it is not about assessing any individual learner. It is only an expert usability/safety spot-check of text outputs. The results will be reported only in aggregate and anonymized form.
+
+Thank you very much for your time and help.
+
+Best regards,
+[Jiaqian]
