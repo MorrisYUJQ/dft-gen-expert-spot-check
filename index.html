@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DFT-GEN Expert Spot-Check</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #1d2533;
@@ -21,7 +24,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Atkinson Hyperlegible", "Lexend", Verdana, sans-serif;
       color: var(--ink);
       background:
         radial-gradient(circle at 20% 0%, rgba(35, 87, 137, .14), transparent 32rem),
@@ -41,12 +44,13 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, .62);
       color: var(--blue);
-      font: 700 12px/1.2 Verdana, sans-serif;
+      font: 700 12px/1.2 "Lexend", Verdana, sans-serif;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
     h1 {
       margin: 18px 0 8px;
+      font-family: "Lexend", "Atkinson Hyperlegible", Verdana, sans-serif;
       font-size: clamp(34px, 5vw, 62px);
       line-height: .98;
       letter-spacing: -.045em;
@@ -94,7 +98,7 @@
     .progress-text {
       margin-top: 6px;
       color: var(--muted);
-      font: 13px Verdana, sans-serif;
+      font: 13px "Lexend", Verdana, sans-serif;
     }
     .actions {
       display: flex;
@@ -109,7 +113,7 @@
       padding: 10px 14px;
       background: var(--panel);
       color: var(--ink);
-      font: 700 13px Verdana, sans-serif;
+      font: 700 13px "Lexend", Verdana, sans-serif;
       transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
     }
     button:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,.10); }
@@ -147,7 +151,7 @@
       background: linear-gradient(90deg, rgba(35,87,137,.10), rgba(49,120,95,.08));
       border-bottom: 1px solid var(--line);
     }
-    .sample-id { font: 800 15px Verdana, sans-serif; letter-spacing: .02em; }
+    .sample-id { font: 800 15px "Lexend", Verdana, sans-serif; letter-spacing: .02em; }
     .badge {
       display: inline-block;
       padding: 4px 9px;
@@ -155,7 +159,7 @@
       background: white;
       border: 1px solid var(--line);
       color: var(--blue);
-      font: 700 12px Verdana, sans-serif;
+      font: 700 12px "Lexend", Verdana, sans-serif;
     }
     .texts {
       display: grid;
@@ -167,17 +171,94 @@
       min-height: 190px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 15px;
+      padding: 0;
       background: #fffaf0;
-      white-space: pre-wrap;
-      font-size: 15px;
+      overflow: hidden;
     }
     .text-box h3 {
-      margin: 0 0 10px;
-      font: 800 13px Verdana, sans-serif;
+      margin: 0;
+      padding: 13px 15px 9px;
+      font: 800 13px "Lexend", Verdana, sans-serif;
       color: var(--blue);
       letter-spacing: .04em;
       text-transform: uppercase;
+    }
+    .reading-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 0 12px 10px;
+    }
+    .reading-tools button {
+      padding: 6px 9px;
+      font-size: 11px;
+      background: #f3efe6;
+    }
+    .reader-stage {
+      --focus-top: 22px;
+      --focus-height: 34px;
+      position: relative;
+      border-top: 1px solid var(--line);
+      background: #fffdf8;
+    }
+    .text-content {
+      max-height: 365px;
+      overflow: auto;
+      padding: 16px 17px 22px;
+      white-space: pre-wrap;
+      font-family: "Atkinson Hyperlegible", "Lexend", Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      letter-spacing: .018em;
+      word-spacing: .08em;
+    }
+    .text-content strong {
+      font-weight: 800;
+      color: #0f3f6b;
+      background: rgba(217, 234, 250, .78);
+      border-radius: 5px;
+      padding: 0 .12em;
+    }
+    .text-content mark,
+    .text-content .hl {
+      background: #ffe680;
+      color: #1d2533;
+      border-radius: 5px;
+      padding: 0 .14em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .focus-mask,
+    .focus-window {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .focus-mask.top {
+      top: 0;
+      height: var(--focus-top);
+      background: rgba(0, 0, 0, .70);
+    }
+    .focus-mask.bottom {
+      top: calc(var(--focus-top) + var(--focus-height));
+      bottom: 0;
+      background: rgba(0, 0, 0, .70);
+    }
+    .focus-window {
+      top: var(--focus-top);
+      height: var(--focus-height);
+      left: 8px;
+      right: 8px;
+      border-top: 2px solid rgba(255, 230, 128, .95);
+      border-bottom: 2px solid rgba(255, 230, 128, .95);
+      box-shadow: 0 0 0 1px rgba(255,255,255,.26) inset;
+    }
+    .reader-stage.focus-on .focus-mask,
+    .reader-stage.focus-on .focus-window {
+      display: block;
     }
     .rating-grid {
       display: grid;
@@ -193,14 +274,14 @@
     }
     .rating-panel h3 {
       margin: 0 0 12px;
-      font: 800 16px Verdana, sans-serif;
+      font: 800 16px "Lexend", Verdana, sans-serif;
     }
     .field { margin: 13px 0; }
     .field label.question {
       display: block;
       margin-bottom: 7px;
       color: var(--muted);
-      font: 700 13px Verdana, sans-serif;
+      font: 700 13px "Lexend", Verdana, sans-serif;
     }
     .radio-row {
       display: flex;
@@ -215,7 +296,7 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       background: #fbf7ef;
-      font: 13px Verdana, sans-serif;
+      font: 13px "Lexend", Verdana, sans-serif;
     }
     textarea {
       width: 100%;
@@ -224,7 +305,7 @@
       border-radius: 14px;
       padding: 11px;
       resize: vertical;
-      font: 14px/1.45 Verdana, sans-serif;
+      font: 14px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif;
       color: var(--ink);
       background: #fffdf8;
     }
@@ -234,7 +315,7 @@
     .status {
       min-height: 20px;
       color: var(--green);
-      font: 13px Verdana, sans-serif;
+      font: 13px "Lexend", Verdana, sans-serif;
     }
     .modal {
       position: fixed;
@@ -305,6 +386,7 @@
           <li><strong>Meaning preserved:</strong> 1 = serious meaning/task change, 3 = mostly preserved with concerns, 5 = fully preserves meaning and task requirements.</li>
           <li><strong>Dyslexia-friendly presentation:</strong> 1 = not helpful or harder, 3 = somewhat clearer, 5 = clearly reduces reading burden.</li>
           <li><strong>Decision:</strong> Accept = usable as is, Revise = needs human edits, Reject = unsuitable or unsafe.</li>
+          <li><strong>Focus line:</strong> use the reading-mask controls above each text box to view one line at a time; the surrounding text is covered by a 70% black overlay.</li>
         </ul>
       </div>
       <div class="notice" style="padding:18px">
@@ -385,10 +467,40 @@
       progressText.textContent = `${completed} of ${SAMPLES.length} samples complete (${pct}%)`;
     }
 
+    function renderText(value) {
+      let s = escapeHtml(value);
+      s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+      s = s.replace(/==([^=]+)==/g, "<mark>$1</mark>");
+      s = s.replace(/&lt;strong&gt;([\s\S]*?)&lt;\/strong&gt;/gi, "<strong>$1</strong>");
+      s = s.replace(/&lt;b&gt;([\s\S]*?)&lt;\/b&gt;/gi, "<strong>$1</strong>");
+      s = s.replace(/&lt;mark&gt;([\s\S]*?)&lt;\/mark&gt;/gi, "<mark>$1</mark>");
+      s = s.replace(/&lt;highlight&gt;([\s\S]*?)&lt;\/highlight&gt;/gi, "<mark>$1</mark>");
+      return s;
+    }
+
     function radioGroup(sampleId, field, values) {
       return `<div class="radio-row">` + values.map(v => `
         <label><input type="radio" name="${sampleId}__${field}" value="${escapeHtml(v)}"> ${escapeHtml(v)}</label>
       `).join("") + `</div>`;
+    }
+
+    function textPanel(sampleId, panelId, title, text) {
+      const id = `${sampleId}-${panelId}`;
+      return `
+        <section class="text-box">
+          <h3>${escapeHtml(title)}</h3>
+          <div class="reading-tools" aria-label="Reading focus controls for ${escapeHtml(title)}">
+            <button type="button" data-mask-toggle="${id}">Focus line</button>
+            <button type="button" data-mask-move="${id}" data-direction="-1">Move up</button>
+            <button type="button" data-mask-move="${id}" data-direction="1">Move down</button>
+          </div>
+          <div class="reader-stage" id="${id}" data-focus-index="0">
+            <div class="text-content">${renderText(text)}</div>
+            <div class="focus-mask top"></div>
+            <div class="focus-window"></div>
+            <div class="focus-mask bottom"></div>
+          </div>
+        </section>`;
     }
 
     function sampleMarkup(sample) {
@@ -396,12 +508,12 @@
       <article class="sample" id="${sample.id}">
         <div class="sample-head">
           <div><span class="sample-id">${sample.id}</span> <span class="badge">${escapeHtml(sample.subject)}</span></div>
-          <a href="#${sample.id}" style="color:var(--muted);font:13px Verdana,sans-serif">Link to sample</a>
+          <a href="#${sample.id}" style="color:var(--muted);font:13px 'Lexend', Verdana, sans-serif">Link to sample</a>
         </div>
         <div class="texts">
-          <section class="text-box"><h3>Original text</h3>${escapeHtml(sample.original)}</section>
-          <section class="text-box"><h3>Version A</h3>${escapeHtml(sample.versionA)}</section>
-          <section class="text-box"><h3>Version B</h3>${escapeHtml(sample.versionB)}</section>
+          ${textPanel(sample.id, "original", "Original text", sample.original)}
+          ${textPanel(sample.id, "a", "Version A", sample.versionA)}
+          ${textPanel(sample.id, "b", "Version B", sample.versionB)}
         </div>
         <div class="rating-grid">
           <section class="rating-panel">
@@ -424,6 +536,54 @@
       </article>`;
     }
 
+    function setFocusPosition(stage, index) {
+      const content = stage.querySelector(".text-content");
+      const lineHeight = 34;
+      const maxVisibleIndex = Math.max(0, Math.floor((stage.clientHeight - lineHeight - 16) / lineHeight));
+      const maxIndex = Math.max(0, Math.ceil(content.scrollHeight / lineHeight) - 1);
+      const nextIndex = Math.min(Math.max(index, 0), maxIndex);
+      stage.dataset.focusIndex = String(nextIndex);
+
+      const visibleIndex = Math.min(nextIndex, maxVisibleIndex);
+      const focusTop = 12 + visibleIndex * lineHeight;
+      stage.style.setProperty("--focus-top", focusTop + "px");
+
+      if (nextIndex > maxVisibleIndex) {
+        content.scrollTop = (nextIndex - maxVisibleIndex) * lineHeight;
+      } else {
+        content.scrollTop = 0;
+      }
+    }
+
+    function initReaderTools() {
+      if (form.dataset.readerToolsBound === "true") return;
+      form.dataset.readerToolsBound = "true";
+      form.addEventListener("click", event => {
+        const toggle = event.target.closest("[data-mask-toggle]");
+        const move = event.target.closest("[data-mask-move]");
+        if (!toggle && !move) return;
+
+        const targetId = (toggle || move).dataset.maskToggle || (toggle || move).dataset.maskMove;
+        const stage = document.getElementById(targetId);
+        if (!stage) return;
+
+        if (toggle) {
+          stage.classList.toggle("focus-on");
+          toggle.textContent = stage.classList.contains("focus-on") ? "Hide mask" : "Focus line";
+          setFocusPosition(stage, Number(stage.dataset.focusIndex || 0));
+        }
+
+        if (move) {
+          stage.classList.add("focus-on");
+          const parentTools = move.closest(".reading-tools");
+          const toggleButton = parentTools?.querySelector("[data-mask-toggle]");
+          if (toggleButton) toggleButton.textContent = "Hide mask";
+          const direction = Number(move.dataset.direction || 1);
+          setFocusPosition(stage, Number(stage.dataset.focusIndex || 0) + direction);
+        }
+      });
+    }
+
     function render() {
       form.innerHTML = SAMPLES.map(sampleMarkup).join("");
       const state = loadState();
@@ -439,8 +599,12 @@
           }
         }
       }
-      form.addEventListener("change", () => saveState(getStateFromDom()));
-      form.addEventListener("input", () => saveState(getStateFromDom()));
+      if (form.dataset.autosaveBound !== "true") {
+        form.dataset.autosaveBound = "true";
+        form.addEventListener("change", () => saveState(getStateFromDom()));
+        form.addEventListener("input", () => saveState(getStateFromDom()));
+      }
+      initReaderTools();
       updateProgress();
     }
 
