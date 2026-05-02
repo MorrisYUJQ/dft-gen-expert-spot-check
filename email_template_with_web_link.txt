@@ -4,8 +4,14 @@ Dear [Name],
 
 I hope you are well. I am currently preparing a research submission on dyslexia-friendly text generation, and I would be very grateful if you could help with a short expert spot-check of English rewritten texts.
 
-The rating form is available here:
-https://morrisyujq.github.io/dft-gen-expert-spot-check/
+Your assigned rating form is available here:
+[Assigned link]
+
+Assigned links:
+- Olivia Lee: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=olivia
+- Marilyn Day: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=marilyn
+- Ava Vandiar: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=ava
+- Benita Heyburgh: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=benita
 
 The form contains 20 English samples. For each sample, you will see the original text and two anonymized rewritten versions, labelled Version A and Version B. The system identities are hidden. Could you please rate each version on:
 
