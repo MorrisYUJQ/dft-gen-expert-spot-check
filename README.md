@@ -2,11 +2,10 @@
 
 Static English-only expert rating form for blind A/B evaluation of dyslexia-friendly text rewrites.
 
-The landing page routes four experts to separate 20-sample forms:
+The current deployment is an Ava Vandiar follow-up audit:
 
-- Olivia Lee
-- Marilyn Day
-- Ava Vandiar
-- Benita Heyburgh
+- 30 blind A/B samples
+- 60 candidate-output ratings
+- lighter visual cueing after the first expert feedback round
 
-Responses are saved locally in the browser per expert form and can be exported as CSV or JSON. No response data is uploaded automatically.
+Responses are saved locally in the browser and can be exported as CSV or JSON. No response data is uploaded automatically.

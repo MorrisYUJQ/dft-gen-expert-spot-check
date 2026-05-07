@@ -1,31 +1,21 @@
-Subject: Request for a short expert spot-check on dyslexia-friendly English text rewriting
+Subject: Follow-up expert spot-check request for DFT-GEN outputs
 
-Dear [Name],
+Dear Ava,
 
-I hope you are well. I am currently preparing a research submission on dyslexia-friendly text generation, and I would be very grateful if you could help with a short expert spot-check of English rewritten texts.
+Thank you again for your very helpful comments on the first DFT-GEN spot-check. Your feedback was especially useful in identifying that excessive highlighting can create visual overload or unintended hinting. We have revised our outputs accordingly, with much lighter visual cueing and a stronger focus on preserving meaning and task requirements.
 
-Your assigned rating form is available here:
-[Assigned link]
+If you are available, may I ask whether you could help with one final follow-up spot-check? The updated web form contains 30 samples. Each sample has two anonymized candidate outputs, so this gives 60 candidate-output ratings in total. As before, you only need to rate meaning preservation, dyslexia-friendly presentation, deployment decision, and optionally leave short comments where something looks unsafe or visually overloaded.
 
-Assigned links:
-- Olivia Lee: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=olivia
-- Marilyn Day: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=marilyn
-- Ava Vandiar: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=ava
-- Benita Heyburgh: https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=benita
+Form link:
+https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=ava
 
-The form contains 20 English samples. For each sample, you will see the original text and two anonymized rewritten versions, labelled Version A and Version B. The system identities are hidden. Could you please rate each version on:
+Your responses are saved only in your browser. After finishing, please click "Export CSV" and send the downloaded file back to me.
 
-1. Whether it preserves the original meaning and task requirements (1-5),
-2. Whether the presentation is likely to reduce reading burden for dyslexic readers (1-5),
-3. Whether you would Accept, Revise, or Reject it before use.
+As a small compensation for the extra time, we would be very happy to offer HKD 200 for this follow-up review. Please let me know the most convenient way for us to arrange this.
 
-Short comments are completely fine. It would be especially helpful if you could flag cases where a rewrite loses important terminology, changes the instruction, adds unintended hints, sounds unnatural, or is visually difficult to follow.
-
-The form saves responses locally in your browser only. After finishing, please click "Export CSV" and send the downloaded CSV file back to me.
-
-This is not a clinical or diagnostic evaluation, and it is not about assessing any individual learner. It is only an expert usability/safety spot-check of text outputs. The results will be reported only in aggregate and anonymized form.
+This is not a clinical or diagnostic evaluation and does not assess any individual learner. It is only an expert usability and safety spot-check of text outputs, and results will be reported only in aggregate and anonymized form.
 
 Thank you very much for your time and help.
 
 Best regards,
-[Jiaqian]
+Jiaqian
