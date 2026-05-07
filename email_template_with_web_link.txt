@@ -4,7 +4,7 @@ Dear Ava,
 
 Thank you again for your very helpful comments on the first DFT-GEN spot-check. Your feedback was especially useful in identifying that excessive highlighting can create visual overload or unintended hinting. We have revised our outputs accordingly, with much lighter visual cueing, more generous spacing, and a stronger focus on preserving meaning and task requirements.
 
-If you are available, may I ask whether you could help with one final follow-up spot-check? The updated web form contains 30 samples. Each sample has two anonymized candidate outputs, so this gives 60 candidate-output ratings in total. As before, you only need to rate meaning preservation, dyslexia-friendly presentation, deployment decision, and optionally leave short comments where something looks unsafe or visually overloaded.
+If you are available, may I ask whether you could help with one final follow-up spot-check? The updated web form contains 60 samples. Each sample has two anonymized candidate outputs. As before, you only need to rate meaning preservation, dyslexia-friendly presentation, deployment decision, and optionally leave short comments where something looks unsafe or visually overloaded.
 
 Form link:
 https://morrisyujq.github.io/dft-gen-expert-spot-check/?reviewer=ava
